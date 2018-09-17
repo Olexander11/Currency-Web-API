@@ -17,5 +17,9 @@ namespace WebApplication001.Models
         {
             Database.EnsureCreated();
         }
+
+        public CurrencyContext()
+        {
+        }
     }
 }

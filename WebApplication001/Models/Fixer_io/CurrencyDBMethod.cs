@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,7 @@ namespace WebApplication001.Models.Fixer_io
             {
                 DateTime someDaysAgo = date.AddDays(-i);
 
-                using (CurrecyContext context = new CurrecyContext())
+                using (CurrencyContext context = new CurrencyContext())
                 {
                     string dbDateFrmat = someDaysAgo.ToString("yyyy-MM-dd");
                     var result = context.Currencies.FirstOrDefault(rec => rec.Date == dbDateFrmat);
@@ -48,7 +50,7 @@ namespace WebApplication001.Models.Fixer_io
                 //}
 
 
-                using (CurrecyContext db = new CurrecyContext())
+                using (CurrencyContext db = new CurrencyContext())
                 {
                     Currency currencyRate = JsonConvert.DeserializeObject<Currency>(rawResponse);
 
