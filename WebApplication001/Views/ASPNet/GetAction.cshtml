@@ -1,0 +1,24 @@
+﻿@model Object[,]
+@{
+    ViewData["Title"] = "GetAction";
+}
+
+<h2>GetAction</h2>
+<table border="1">
+   @{ 
+       var numRow = Model.GetLength(0);
+       var numCol = Model.GetLength(1);
+       for (int i = 0; i < numRow-1; i++)
+       {
+           <tr>
+              @{ for (int j = 0; j < numCol; j++)
+                  {
+                     <td>@Model[i,j] </td> 
+                      }
+                  }
+           </tr>
+
+       }
+   }
+
+</table>

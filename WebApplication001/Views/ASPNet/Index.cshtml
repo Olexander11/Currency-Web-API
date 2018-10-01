@@ -1,0 +1,79 @@
+﻿@model WebApplication001.Controllers.MyViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Input proper information</h2>
+<form asp-controller="ASPNet" asp-action="GetAction" method="post">
+    <table>
+        <tr>
+            <td>Select base currency</td>
+            <td><select name="BaseCurr" asp-items="@Model.CurrencyList">
+                    <option  selected>EUR</option>
+                </select> </td>
+        </tr>
+
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr01" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr02" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr03" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr04" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr05" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr06" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr07" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr08" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr09" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+        <tr>
+            <td>Select dependency currency</td>
+            <td><select name="Curr10" asp-items="@Model.CurrencyList">
+                    <option disabled selected>-select-</option>
+                </select> </td>
+        </tr>
+    </table>
+    <input type="submit" />
+
+</form>

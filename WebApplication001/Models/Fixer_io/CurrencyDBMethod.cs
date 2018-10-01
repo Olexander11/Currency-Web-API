@@ -11,17 +11,28 @@ namespace WebApplication001.Models.Fixer_io
 {
     public static class CurrencyDBMethod
     {
+        
+
         public static void DBUpdate(DateTime date)
         {
+            CurrencyContext db;
+
+
             for (int i = 0; i < 10; i++)
             {
                 DateTime someDaysAgo = date.AddDays(-i);
 
                 using (CurrencyContext context = new CurrencyContext())
                 {
+                    db = context;
                     string dbDateFrmat = someDaysAgo.ToString("yyyy-MM-dd");
-                    var result = context.Currencies.FirstOrDefault(rec => rec.Date == dbDateFrmat);
-                    if (result != null) continue;
+                    var currRes = db.Currencies;
+                    if (currRes.Any(x => x != null))
+                    {
+                        var result = currRes.FirstOrDefault(rec => rec.Date == dbDateFrmat);
+                        if (result != null) continue;
+                    }
+                    
 
                 }
 

@@ -26,6 +26,7 @@ namespace WebApplication001
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<CurrencyContext>(options => options.UseSqlServer(connection));
             // add update currency service
@@ -33,22 +34,25 @@ namespace WebApplication001
             services.AddMvc();
         }
 
+       
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        
+
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IDBUpdate dBUpdateService)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                
             }
 
            else
              {
-                IDBUpdate dBUpdate = new DBUpdateFixer();
-                dBUpdate.Update(DateTime.Now);
+               
 
              }
+            IDBUpdate dBUpdate = new DBUpdateFixer();
+            dBUpdate.Update(DateTime.Now);
 
             app.UseStaticFiles();
             app.UseMvc(routes =>

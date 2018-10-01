@@ -5,11 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\ASPNet\" />
     <Folder Include="Views\Angular2\" />
     <Folder Include="Views\Acount\" />
-    <Folder Include="wwwroot\CSS\" />
-    <Folder Include="wwwroot\JS\" />
+    <Folder Include="wwwroot\Fonts\" />
   </ItemGroup>
 
   <ItemGroup>

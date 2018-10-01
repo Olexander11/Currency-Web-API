@@ -16,6 +16,8 @@ namespace WebApplication001.Models
         public string _base { get; set; } = "EUR";
         public string Date { get; set; }
         public Rates Rates { get; set; }
+
+
     }
 
 
